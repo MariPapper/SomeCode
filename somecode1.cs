@@ -50,16 +50,6 @@ namespace OrgansThing
 				}
 				else 
 				{
-				Console.WriteLine(ask);
-				numeroAuxiliar = Console.ReadLine();
-				Console.WriteLine("You can only donate one organ.");
-				Console.WriteLine(ask);
-				numeroAuxiliar = Console.ReadLine();
-				}
-				while (numeroAuxiliar != "1")
-				{
-				Console.WriteLine(ask);
-				numeroAuxiliar = Console.ReadLine();
 				Console.WriteLine("You can only donate one organ.");
 				Console.WriteLine(ask);
 				numeroAuxiliar = Console.ReadLine();
@@ -68,8 +58,18 @@ namespace OrgansThing
 				Console.WriteLine("Full Name:   {0} {1}", FirstName, LastName);
 				Console.WriteLine("Organ Donor? {0}", WillingToBeAnOrganDonor);
 				Console.WriteLine("Number of organs:   {0}", numeroAuxiliar);
-				//numeroConvertido = Convert.ToInt32(numeroAuxiliar);
-				//numeroConvertido = int.Parse(numeroAuxiliar);
+				sucessoConversao = int.TryParse(numeroAuxiliar, out numeroConvertido);
+				}
+				while (numeroAuxiliar != "1")
+				{
+				Console.WriteLine("You can only donate one organ.");	
+				Console.WriteLine(ask);
+				numeroAuxiliar = Console.ReadLine();
+				Console.WriteLine(" -=- Motor Vehicle Administration -=-");
+				Console.WriteLine(" --- Driver's License Information ---");
+				Console.WriteLine("Full Name:   {0} {1}", FirstName, LastName);
+				Console.WriteLine("Organ Donor? {0}", WillingToBeAnOrganDonor);
+				Console.WriteLine("Number of organs:   {0}", numeroAuxiliar);
 				sucessoConversao = int.TryParse(numeroAuxiliar, out numeroConvertido);
 				}
 			}
