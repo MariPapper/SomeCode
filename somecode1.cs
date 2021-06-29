@@ -17,8 +17,8 @@ namespace OrgansThing
 			bool repeat = false;
 			do
 			{
-			Console.WriteLine(" -=- Motor Vehicle Administration -=-");
-			Console.WriteLine(" --- Driver's License Application ---");
+			Console.WriteLine(" -=- Venture Hospital Service Desk -=-");
+			Console.WriteLine(" --- Volunteer Donors' Application ---");
 			Console.Write("First Name: ");
 			FirstName = Console.ReadLine();
 			Console.Write("Last Name:  ");
@@ -39,8 +39,8 @@ namespace OrgansThing
 				{
 				Console.WriteLine(ask);
 				numeroAuxiliar = Console.ReadLine();
-				Console.WriteLine(" -=- Motor Vehicle Administration -=-");
-				Console.WriteLine(" --- Driver's License Information ---");
+				Console.WriteLine(" -=- Venture Hospital Service Desk -=-");
+				Console.WriteLine(" --- Volunteer Donors' Information ---");
 				Console.WriteLine("Full Name:   {0} {1}", FirstName, LastName);
 				Console.WriteLine("Organ Donor? {0}", WillingToBeAnOrganDonor);
 				Console.WriteLine("Number of organs:   {0}", numeroAuxiliar);
@@ -53,8 +53,8 @@ namespace OrgansThing
 				Console.WriteLine("You can only donate one organ.");
 				Console.WriteLine(ask);
 				numeroAuxiliar = Console.ReadLine();
-				Console.WriteLine(" -=- Motor Vehicle Administration -=-");
-				Console.WriteLine(" --- Driver's License Information ---");
+				Console.WriteLine(" -=- Venture Hospital Service Desk -=-");
+				Console.WriteLine(" --- Volunteer Donors' Information ---");
 				Console.WriteLine("Full Name:   {0} {1}", FirstName, LastName);
 				Console.WriteLine("Organ Donor? {0}", WillingToBeAnOrganDonor);
 				Console.WriteLine("Number of organs:   {0}", numeroAuxiliar);
@@ -65,8 +65,8 @@ namespace OrgansThing
 				Console.WriteLine("You can only donate one organ.");	
 				Console.WriteLine(ask);
 				numeroAuxiliar = Console.ReadLine();
-				Console.WriteLine(" -=- Motor Vehicle Administration -=-");
-				Console.WriteLine(" --- Driver's License Information ---");
+				Console.WriteLine(" -=- Venture Hospital Service Desk -=-");
+				Console.WriteLine(" --- Volunteer Donors' Information ---");
 				Console.WriteLine("Full Name:   {0} {1}", FirstName, LastName);
 				Console.WriteLine("Organ Donor? {0}", WillingToBeAnOrganDonor);
 				Console.WriteLine("Number of organs:   {0}", numeroAuxiliar);
