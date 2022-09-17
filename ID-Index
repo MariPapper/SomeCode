@@ -1,0 +1,78 @@
+using System;
+ 
+public class Helloworld
+{
+    public static void Main()
+    {
+        int opcao, nUtilizadores;
+        bool opcaosair = false;
+        Console.WriteLine("Quantos utilizadores pretende adicionar? \n");
+		    nUtilizadores = Convert.ToInt32(Console.ReadLine());
+		    string[,] NovoUtilizador = new string[5, nUtilizadores];                   
+		    do
+        {
+            Console.WriteLine("\nMENU:\n");
+            Console.WriteLine("\n1- Adicionar Utilizador \n2- Editar Utilizadores \n3- Mostrar Utilizadores \n0- Sair\n");
+            opcao = Convert.ToInt32(Console.ReadLine());   
+            if(opcao >= 0 || opcao <= 3)
+            { 
+                switch (opcao)
+                {
+                    case 0: //sair
+                        opcaosair = true;
+                        break;
+					          case 1: // Adicionar Utilizador
+                        for(int i = 0; i < nUtilizadores; i++)
+                        {
+                            Console.WriteLine("\nO ID do Utilizador {0}: ", i);
+                            string UID = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[0, i] = UID;
+                            Console.WriteLine("\nInsira o nome do Utilizador {0}:", i);
+                            string nome = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[1,i] = nome;
+                            Console.WriteLine("\nInsira a Altura do Utilizador {0}:", i);
+                            string altura = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[2, i] = altura;
+                            Console.WriteLine("\nInsira a Data de Nascimento do Utilizador {0}:", i);
+                            string Data = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[3, i] = Data; 
+                            Console.WriteLine("\nUtilizadore(s) Inseridos com sucesso!");
+                        }
+						            break;
+                    case 2: //Editar Utilizadores 
+                        for(int i = 0; i < nUtilizadores; i++)							
+                        {
+                            Console.WriteLine("\nInsira o ID de Utilizador para modificar: ");
+							              NovoUtilizador[0, i] = Convert.ToString(Console.ReadLine());
+                            Console.WriteLine("\nO novo ID do Utilizador {0}: ", NovoUtilizador[0, i]);
+                            string uidA = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[0, i] = uidA;                          
+                            Console.WriteLine("\nInsira o novo nome do Utilizador {0}:", i);
+                            string nomeA = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[1, i] = nomeA; 
+                            Console.WriteLine("\nInsira a nova Altura do Utilizador {0}:", i);
+                            string alturaA = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[2, i] = alturaA; 
+                            Console.WriteLine("\nInsira a nova Data de Nascimento do Utilizador {0}:", i);
+                            string Data = Convert.ToString(Console.ReadLine());
+                            NovoUtilizador[3, i] = Data;
+							              Console.WriteLine("\nO utilizador foi alterado com sucesso!");
+                            break;
+                            }
+                            break; 
+                    case 3: //Mostrar Utilizadores
+                        for(int i = 0; i < nUtilizadores; i++)
+                         {
+                            Console.WriteLine("\nOs Dados do utilizador com ID {0}. \nNome: {1} \nAltura: {2} \nData de Nascimento: {3} ", NovoUtilizador[0, i], NovoUtilizador[1, i], NovoUtilizador[2, i], NovoUtilizador[3, i]);                        
+                            Console.WriteLine("\nO id do utilizador: {0}", NovoUtilizador[0, i]);
+                            Console.WriteLine("O nome do utilizador {0}: {1}", NovoUtilizador[0, i], NovoUtilizador[1, i]);
+                            Console.WriteLine("A altura do utilizador {0}: {1}", NovoUtilizador[0, i], NovoUtilizador[2, i]);
+                            Console.WriteLine("A data de nascimento do utilizador {0}: {1}", NovoUtilizador[0, i], NovoUtilizador[3, i]);
+                         }
+                         break;
+                }
+            }
+		}
+		while(true);
+    }
+}
